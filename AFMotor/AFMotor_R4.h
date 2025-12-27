@@ -30,14 +30,15 @@ const int MT_PINS[4][3] =  {
 extern bool HCOUT[8];
 void MT_shiftOut();
 
+enum
+{
+    MOTOR12_64KHZ = 1,
+};
+
 class AF_DCMotor
 {
 private:
     int mtn;
-    enum
-    {
-        MOTOR12_64KHZ = 1,
-    };
 public:
     AF_DCMotor(int mt, int MOTOR_TYPE = MOTOR12_64KHZ);
     void setSpeed(int speed);
