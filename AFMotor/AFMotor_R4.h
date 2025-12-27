@@ -34,8 +34,12 @@ class AF_DCMotor
 {
 private:
     int mtn;
+    enum
+    {
+        MOTOR12_64KHZ = 1,
+    };
 public:
-    AF_DCMotor(int mt);
+    AF_DCMotor(int mt, int MOTOR_TYPE = MOTOR12_64KHZ);
     void setSpeed(int speed);
     void run(int dir);
     void autoRun(int speed);

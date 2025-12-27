@@ -46,7 +46,7 @@ void MT_shiftOut()
 }
 
 
-AF_DCMotor::AF_DCMotor(int mt)
+AF_DCMotor::AF_DCMotor(int mt, int MOTOR_TYPE = MOTOR12_64KHZ)
 {
     this->mtn = mt - 1;
     pinMode(DATA, OUTPUT);
